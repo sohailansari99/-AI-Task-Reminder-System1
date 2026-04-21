@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Task Reminder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            color: #fff;
+            background: linear-gradient(135deg, #0f172a, #1e293b, #312e81);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .bg-blur {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: 0;
+            opacity: 0.35;
+        }
+
+        .blur-one {
+            width: 280px;
+            height: 280px;
+            background: #3b82f6;
+            top: 80px;
+            left: 80px;
+        }
+
+        .blur-two {
+            width: 320px;
+            height: 320px;
+            background: #a855f7;
+            bottom: 60px;
+            right: 80px;
+        }
+
+        .navbar {
+            position: relative;
+            z-index: 2;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 26px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .navbar nav {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+        }
+
+        .navbar nav a {
+            text-decoration: none;
+            color: #e2e8f0;
+            font-weight: 500;
+        }
+
+        .nav-btn {
+            padding: 10px 18px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .hero {
+            position: relative;
+            z-index: 2;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: calc(100vh - 90px);
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            margin-bottom: 24px;
+            color: #cbd5e1;
+            font-size: 0.92rem;
+        }
+
+        .hero-left h1 {
+            font-size: 3.2rem;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero-left p {
+            color: #cbd5e1;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            max-width: 650px;
+            margin-bottom: 28px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 14px 22px;
+            border-radius: 14px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .btn.primary {
+            background: linear-gradient(135deg, #3b82f6, #6366f1);
+            color: white;
+        }
+
+        .btn.secondary {
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .hero-card {
+            display: flex;
+            justify-content: center;
+        }
+
+        .glass-card {
+            width: 100%;
+            max-width: 420px;
+            padding: 28px;
+            border-radius: 28px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+        }
+
+        .glass-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-item {
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+
+        .feature-item strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .feature-item p {
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 40px 0 60px;
+            }
+            .hero-left h1 {
+                font-size: 2.3rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="bg-blur blur-one"></div>
+    <div class="bg-blur blur-two"></div>
+
+    <header class="navbar">
+        <div class="brand">AI Reminder</div>
+        <nav>
+            <a href="login.html">Login</a>
+            <a href="signup.html" class="nav-btn">Signup</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <section class="hero-left">
+            <span class="tag">Smart Productivity Assistant</span>
+            <h1>Plan smarter, remember everything, and let AI do the heavy lifting.</h1>
+            <p>
+                Create tasks, get email reminders, generate study plans, and manage your day
+                with an intelligent reminder assistant.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="signup.html" class="btn primary">Get Started</a>
+                <a href="login.html" class="btn secondary">Login</a>
+            </div>
+        </section>
+
+        <section class="hero-card">
+            <div class="glass-card">
+                <h3>What you can do</h3>
+                <div class="feature-item">
+                    <strong>AI Plans</strong>
+                    <p>Ask AI to build study plans and reminders from natural language.</p>
+                </div>
+                <div class="feature-item">
+                    <strong>Smart Priority</strong>
+                    <p>Priority updates automatically as deadlines come closer.</p>
+                </div>
+                <div class="feature-item">
+                    <strong>Email Reminders</strong>
+                    <p>Never miss a task with automatic scheduled notifications.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

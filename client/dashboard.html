@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | AI Task Reminder</title>
+  <link rel="stylesheet" href="./css/dashboard.css" />
+</head>
+<body>
+  <div class="dashboard-page">
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>AI Reminder</h2>
+      </div>
+
+      <nav class="nav-links">
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="add-task.html">Add Task</a>
+        <a href="ai-assistant.html">AI Assistant</a>
+        <a href="history.html">Task History</a>
+      </nav>
+
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1>Welcome back, <span id="userName">User</span> 👋</h1>
+          <p>Your smart productivity dashboard is ready.</p>
+        </div>
+      </header>
+
+      <section class="stats-grid">
+        <div class="stat-card">
+          <h3>Total Tasks</h3>
+          <p id="totalTasks">0</p>
+        </div>
+        <div class="stat-card">
+          <h3>Pending</h3>
+          <p id="pendingTasks">0</p>
+        </div>
+        <div class="stat-card">
+          <h3>Completed</h3>
+          <p id="completedTasks">0</p>
+        </div>
+        <div class="stat-card highlight">
+          <h3>High Priority</h3>
+          <p id="highPriorityTasks">0</p>
+        </div>
+      </section>
+
+      <section class="recent-tasks-section">
+        <div class="section-header">
+          <h2>Recent Tasks</h2>
+        </div>
+
+        <div id="recentTasks" class="recent-task-list">
+          <div class="empty-state">
+            <p>No tasks found yet.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/dashboard.js"></script>
+</body>
+</html>

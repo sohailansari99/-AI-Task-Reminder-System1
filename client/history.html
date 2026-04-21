@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task History | AI Task Reminder</title>
+  <link rel="stylesheet" href="./css/history.css" />
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>AI Reminder</h2>
+      </div>
+
+      <nav class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="add-task.html">Add Task</a>
+        <a href="ai-assistant.html">AI Assistant</a>
+        <a href="history.html" class="active">Task History</a>
+      </nav>
+
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1>Task History</h1>
+          <p>View all your pending, completed, and AI-generated tasks in one place.</p>
+        </div>
+      </header>
+
+      <section class="filters-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="pending">Pending</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+        <button class="filter-btn" data-filter="ai">AI Generated</button>
+      </section>
+
+      <section id="historyList" class="history-list">
+        <div class="empty-state">
+          <p>No task history found.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/history.js"></script>
+</body>
+</html>

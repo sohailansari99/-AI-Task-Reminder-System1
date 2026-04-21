@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES2016",
+    "module": "none",
+    "rootDir": "./ts",
+    "outDir": "./js",
+    "strict": true,
+    "ignoreDeprecations": "6.0"
+  }
+}

@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #312e81);
+  color: white;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.auth-left {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(168, 85, 247, 0.18));
+}
+
+.auth-brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 26px;
+}
+
+.auth-left h1 {
+  font-size: 3rem;
+  margin-bottom: 18px;
+  line-height: 1.15;
+}
+
+.auth-left p {
+  color: #dbeafe;
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+.auth-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 430px;
+  padding: 34px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.auth-form h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.subtext {
+  color: #cbd5e1;
+  margin-bottom: 24px;
+}
+
+.auth-form label {
+  display: block;
+  margin-bottom: 8px;
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #e2e8f0;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+  outline: none;
+}
+
+.auth-form input::placeholder {
+  color: #cbd5e1;
+}
+
+.auth-form button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.auth-form button:hover {
+  transform: translateY(-2px);
+}
+
+.bottom-text {
+  text-align: center;
+  margin-top: 18px;
+  color: #cbd5e1;
+}
+
+.bottom-text a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .auth-page {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-left {
+    padding: 40px 30px 20px;
+  }
+
+  .auth-left h1 {
+    font-size: 2.2rem;
+  }
+}

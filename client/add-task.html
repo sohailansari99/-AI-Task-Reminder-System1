@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add / Edit Task | AI Task Reminder</title>
+  <link rel="stylesheet" href="./css/add-task.css" />
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>AI Reminder</h2>
+      </div>
+
+      <nav class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="add-task.html" class="active">Add Task</a>
+        <a href="ai-assistant.html">AI Assistant</a>
+        <a href="history.html">Task History</a>
+      </nav>
+
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1 id="pageTitle">Add New Task</h1>
+          <p id="pageSubtitle">Create a reminder manually with date, category, and channels.</p>
+        </div>
+      </header>
+
+      <section class="form-card">
+        <form id="taskForm" class="task-form">
+          <div class="form-grid">
+            <div class="form-group full">
+              <label for="title">Task Title</label>
+              <input type="text" id="title" placeholder="Enter task title" required />
+            </div>
+
+            <div class="form-group full">
+              <label for="description">Description</label>
+              <textarea id="description" rows="4" placeholder="Enter task description"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="dueDate">Due Date & Time</label>
+              <input type="datetime-local" id="dueDate" required />
+            </div>
+
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select id="category" required>
+                <option value="study">Study</option>
+                <option value="personal">Personal</option>
+                <option value="work">Work</option>
+                <option value="health">Health</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label>Reminder Channels</label>
+              <div class="checkbox-group">
+                <label class="checkbox-item">
+                  <input type="checkbox" id="emailReminder" checked />
+                  <span>Email Reminder</span>
+                </label>
+
+                <label class="checkbox-item">
+                  <input type="checkbox" id="browserReminder" checked />
+                  <span>Browser Reminder</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submitBtn">Create Task</button>
+        </form>
+
+        <div id="messageBox" class="message-box"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/add-task.js"></script>
+</body>
+</html>

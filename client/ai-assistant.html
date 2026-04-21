@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Assistant | AI Task Reminder</title>
+  <link rel="stylesheet" href="./css/ai-assistant.css" />
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>AI Reminder</h2>
+      </div>
+
+      <nav class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="add-task.html">Add Task</a>
+        <a href="ai-assistant.html" class="active">AI Assistant</a>
+        <a href="history.html">Task History</a>
+      </nav>
+
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1>AI Assistant</h1>
+          <p>Ask the assistant to create reminders, study plans, and tasks from natural language.</p>
+        </div>
+      </header>
+
+      <section class="assistant-layout">
+        <div class="chat-card">
+          <div id="chatMessages" class="chat-messages">
+            <div class="message assistant">
+              <div class="bubble">
+                Hi! Try messages like:
+                <br /><br />
+                <strong>Set a reminder 20-04-2026 time 23:58 for AI study</strong>
+                <br /><br />
+                <strong>Remind me tomorrow at 7 PM for DBMS revision</strong>
+                <br /><br />
+                <strong>Make a 3 day study plan for OS at 8 PM</strong>
+              </div>
+            </div>
+          </div>
+
+          <form id="chatForm" class="chat-form">
+            <input
+              type="text"
+              id="chatInput"
+              placeholder="Type your message here..."
+              required
+            />
+            <button type="submit" id="sendBtn">Send</button>
+          </form>
+        </div>
+
+        <div class="side-panel">
+          <div class="panel-card">
+            <h3>Registered Email</h3>
+            <p id="registeredEmail" class="registered-email">Not available</p>
+            <p class="panel-note">
+              All reminder emails created by AI Assistant will be sent to your registered account email.
+            </p>
+          </div>
+
+          <div class="panel-card">
+            <h3>AI Created Tasks</h3>
+            <div id="createdTasksList" class="created-tasks-list">
+              <p class="placeholder-text">No AI-generated tasks yet.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/ai-assistant.js"></script>
+</body>
+</html>
