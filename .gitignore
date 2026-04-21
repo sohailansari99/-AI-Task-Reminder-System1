@@ -1,19 +1,6 @@
-# Node modules
-node_modules/
-server/node_modules/
-client/node_modules/
-
-# Env files
 .env
 server/.env
 client/.env
-
-# Build folders
-dist/
-build/
-
-# Logs
-*.log
-
-# OS files
-.DS_Store
+node_modules/
+server/node_modules/
+client/node_modules/
