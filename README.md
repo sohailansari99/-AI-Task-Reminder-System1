@@ -6,7 +6,7 @@ An intelligent full-stack productivity application that combines **AI-powered ta
 
 ## 🧠 Overview
 
-The AI Task Reminder System allows users to interact using **natural language** to:
+The AI Task Reminder System allows users  to interact using **natural language** to:
 
 - Create reminders  
 - Generate study plans  
