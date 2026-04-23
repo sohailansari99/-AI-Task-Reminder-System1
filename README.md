@@ -55,7 +55,8 @@ It integrates **AI (via OpenRouter)** with a robust backend to deliver a seamles
 
 ### 🔐 Authentication System
 - JWT-based login & registration  
-- Protected routes  
+- Protected routes
+- Crond, NodeMailer
 
 ---
 
@@ -75,7 +76,8 @@ It integrates **AI (via OpenRouter)** with a robust backend to deliver a seamles
 
 ### Backend
 - Node.js  
-- Express.js  
+- Express.js
+- TypeScript
 
 ### Frontend
 - HTML, CSS, JavaScript (Vanilla + TypeScript)
