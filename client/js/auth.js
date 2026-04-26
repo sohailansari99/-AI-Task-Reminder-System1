@@ -32,7 +32,7 @@ if (signupForm) {
                 window.location.href = "dashboard.html";
             }
             else {
-                alert(data.message || "Signup failed");
+                alert(data.error || data.message || "Signup failed");
             }
         }
         catch (error) {
@@ -61,7 +61,7 @@ if (loginForm) {
                 window.location.href = "dashboard.html";
             }
             else {
-                alert(data.message || "Login failed");
+                alert(data.error || data.message || "Login failed");
             }
         }
         catch (error) {
