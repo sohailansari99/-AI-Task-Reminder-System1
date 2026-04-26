@@ -1,5 +1,7 @@
+export {}
+
 (() => {
-  const ADD_TASK_API_BASE = "https://ai-task-reminder-system1.onrender.com/api";
+  const ADD_TASK_API_BASE = window.location.origin + "/api";
 
   interface TaskResponse {
     success: boolean;

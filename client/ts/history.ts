@@ -1,3 +1,4 @@
+export {}
 (() => {
   const HISTORY_API_BASE = window.location.origin + "/api";
 

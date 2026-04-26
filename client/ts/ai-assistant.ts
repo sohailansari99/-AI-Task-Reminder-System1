@@ -1,3 +1,4 @@
+export {}
 (() => {
   const AI_API_BASE = window.location.origin + "/api";
 

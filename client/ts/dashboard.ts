@@ -1,3 +1,4 @@
+export {}
 (() => {
   const DASHBOARD_API_BASE = window.location.origin + "/api";
 

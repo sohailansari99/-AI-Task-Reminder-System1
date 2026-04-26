@@ -1,8 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "target": "ES2016",
+    "lib": ["ES2016", "DOM"],
+    "module": "ES6",
+    "rootDir": "ts",
     "outDir": ".",
-    "rootDir": "."
+    "strict": false,
+    "skipLibCheck": true
   },
-  "include": ["**/*.ts"]
+  "include": ["ts/**/*.ts"],
+  "exclude": ["node_modules", "*.js"]
 }
