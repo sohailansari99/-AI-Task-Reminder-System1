@@ -41,6 +41,7 @@ const signupUser = async (req, res) => {
       token: generateToken(user._id)
     });
   } catch (error) {
+    console.error("Signup error:", error);
     res.status(500).json({
       success: false,
       message: "Signup failed",
