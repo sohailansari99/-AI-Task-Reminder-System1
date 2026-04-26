@@ -3,5 +3,6 @@
     "target": "ES6",
     "outDir": ".",
     "rootDir": "."
-  }
+  },
+  "include": ["*.ts"]
 }
