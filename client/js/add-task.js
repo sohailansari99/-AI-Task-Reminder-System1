@@ -9,8 +9,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 (() => {
-    const ADD_TASK_API_BASE = "http://localhost:3600/api";
+    const ADD_TASK_API_BASE = window.location.origin + "/api";
+
     const addTaskToken = localStorage.getItem("token");
+
     if (!addTaskToken) {
         window.location.href = "login.html";
         return;

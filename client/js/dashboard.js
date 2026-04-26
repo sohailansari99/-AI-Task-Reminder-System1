@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 (() => {
-    const DASHBOARD_API_BASE = "http://localhost:3600/api";
+    const DASHBOARD_API_BASE = window.location.origin + "/api";
     const dashboardToken = localStorage.getItem("token");
     const dashboardUserData = localStorage.getItem("user");
     if (!dashboardToken) {

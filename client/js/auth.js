@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const AUTH_API_BASE = "http://localhost:3600/api";
+const AUTH_API_BASE = window.location.origin + "/api";
 const signupForm = document.getElementById("signupForm");
 const loginForm = document.getElementById("loginForm");
 if (signupForm) {

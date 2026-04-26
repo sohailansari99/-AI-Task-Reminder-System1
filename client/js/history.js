@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 (() => {
-    const HISTORY_API_BASE = "http://localhost:3600/api";
+    const HISTORY_API_BASE = window.location.origin + "/api";
     const historyToken = localStorage.getItem("token");
     if (!historyToken) {
         window.location.href = "login.html";

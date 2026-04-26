@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 (() => {
-    const AI_API_BASE = "http://localhost:3600/api";
+    const AI_API_BASE = window.location.origin + "/api";
     const aiToken = localStorage.getItem("token");
     const userData = localStorage.getItem("user");
     if (!aiToken) {
