@@ -1,9 +1,17 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 async function connectDB() {
-    await mongoose.connect(process.env.MONGO_URI)
+  try {
+    if (!process.env.MONGO_URI) {
+      throw new Error("MONGO_URI is missing in Render Environment Variables");
+    }
 
-    console.log("Connected to DataBase")  
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log("Connected to DataBase");
+  } catch (error) {
+    console.error("MongoDB connection error:", error.message);
+    process.exit(1);
+  }
 }
 
-module.exports = connectDB
+module.exports = connectDB;
