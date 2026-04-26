@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 const path = require("path");
-const app = require("./src/app");
+const app = require("./server/src/app");
 const connectDB = require("./src/config/db");
 const startReminderCron = require("./src/jobs/reminderCron");
 const startPriorityCron = require("./src/jobs/priorityCron");
