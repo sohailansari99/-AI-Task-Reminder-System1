@@ -1,5 +1,5 @@
 (() => {
-  const HISTORY_API_BASE = "http://localhost:3600/api";
+  const HISTORY_API_BASE = window.location.origin + "/api";
 
   interface Task {
     _id: string;

@@ -1,5 +1,5 @@
 (() => {
-  const AI_API_BASE = "http://localhost:3600/api";
+  const AI_API_BASE = window.location.origin + "/api";
 
   interface UserData {
     _id: string;

@@ -1,5 +1,5 @@
 (() => {
-  const ADD_TASK_API_BASE = "http://localhost:3600/api";
+  const ADD_TASK_API_BASE = "https://ai-task-reminder-system1.onrender.com/api";
 
   interface TaskResponse {
     success: boolean;

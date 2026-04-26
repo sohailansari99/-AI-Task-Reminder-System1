@@ -1,5 +1,5 @@
 (() => {
-  const DASHBOARD_API_BASE = "http://localhost:3600/api";
+  const DASHBOARD_API_BASE = window.location.origin + "/api";
 
   interface User {
     _id: string;
