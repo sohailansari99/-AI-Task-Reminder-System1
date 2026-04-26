@@ -168,6 +168,8 @@ const createStudyPlanTasks = (message) => {
   else if (lower.includes("os")) topic = "Operating System";
   else if (lower.includes("java")) topic = "Java";
   else if (lower.includes("math")) topic = "Mathematics";
+  else if (lower.includes("sports")) topic = "Sports";
+  else if (lower.includes("medical")) topic = "Medical";
 
   const tasks = [];
 
@@ -184,6 +186,8 @@ const createStudyPlanTasks = (message) => {
 
   return tasks;
 };
+
+//calling the OpenRouter API for general questions and answers, not related to task creation
 
 const askOpenRouter = async (message) => {
   try {
@@ -217,6 +221,8 @@ const askOpenRouter = async (message) => {
     throw new Error("Failed to get AI response");
   }
 };
+
+//process the incoming message and determine if it's a request for a study plan, a reminder, or a general question, then respond accordingly
 
 const processAIMessage = async (message) => {
   const lower = message.toLowerCase();

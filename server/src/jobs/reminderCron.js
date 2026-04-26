@@ -21,7 +21,7 @@ const startReminderCron = () => {
       for (const task of dueTasks) {
         console.log("Processing task:", task.title, task._id);
 
-        // ⭐ find the correct owner of the task
+        // find the correct owner of the task
         const user = await User.findById(task.userId);
 
         if (!user) {
@@ -29,7 +29,7 @@ const startReminderCron = () => {
           continue;
         }
 
-        // ⭐ send email to that user's own email
+        // send email to that user's own email
         if (task.reminderChannels.includes("email")) {
           const emailResult = await sendReminderEmail({
             to: user.email,

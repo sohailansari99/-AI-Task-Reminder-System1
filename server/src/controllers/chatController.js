@@ -2,6 +2,8 @@ const ChatHistory = require("../models/chathistory");
 const Task = require("../models/task");
 const { processAIMessage } = require("../services/aiService");
 
+// calculateAIPriority function to determine the priority level of a task based on its due date, content, category, and status. It assigns a score to the task based on how soon it's due, whether it contains important keywords, its category, and if it's overdue. The function returns an object with the priority level (low, medium, high), the calculated score, and the reasons for that score. This helps in prioritizing tasks created by the AI for the user.
+
 const calculateAIPriority = (task) => {
   const now = new Date();
   const due = new Date(task.dueDate);
@@ -62,6 +64,8 @@ const calculateAIPriority = (task) => {
   };
 };
 
+//isGreetingMessage function to check if the incoming message from the user is a greeting. It compares the trimmed and lowercased message against a list of common greeting phrases. This helps the AI to respond with a friendly welcome message when the user initiates a conversation with a greeting.
+
 const isGreetingMessage = (message) => {
   const text = message.trim().toLowerCase();
   return [
@@ -77,6 +81,8 @@ const isGreetingMessage = (message) => {
   ].includes(text);
 };
 
+//isCreatorQuestion function to check if the incoming message from the user is asking about the creator of the AI. It looks for specific phrases in the message that indicate the user is inquiring about who created, made, built, or developed the AI. This allows the AI to respond with information about its creators when such a question is asked.
+
 const isCreatorQuestion = (message) => {
   const text = message.trim().toLowerCase();
   return (
@@ -87,6 +93,8 @@ const isCreatorQuestion = (message) => {
     text.includes("who developed you")
   );
 };
+
+//sendMessageToAI function to handle incoming messages from the user, process them using the AI service, and return the appropriate response. It checks if the message is a greeting or a question about the creator and responds accordingly. For other messages, it calls the processAIMessage function to determine if it's a request for a study plan, a reminder, or a general question, then creates any tasks returned by the AI and saves the chat history. It also calculates the AI priority for any created tasks and includes that in the task data. Finally, it sends back the AI's reply along with any created tasks and the chat history entry.
 
 const sendMessageToAI = async (req, res) => {
   try {
