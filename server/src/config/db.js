@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 
 async function connectDB() {
-    await mongoose.connect("mongodb://localhost:27017/?directConnection=true")
+    await mongoose.connect(process.env.MONGO_URI)
 
     console.log("Connected to DataBase")  
 }
 
-module.exports=connectDB
+module.exports = connectDB
