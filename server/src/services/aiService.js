@@ -130,8 +130,14 @@ const buildExactReminderDate = (message) => {
   const time12 = extractTime12Hour(message);
   const time = time24 || time12 || { hour: 9, minute: 0 };
 
-  baseDate.setHours(time.hour, time.minute, 0, 0);
-  return baseDate;
+  // FIX: force IST timezone
+  const year = baseDate.getFullYear();
+  const month = String(baseDate.getMonth() + 1).padStart(2, "0");
+  const day = String(baseDate.getDate()).padStart(2, "0");
+
+  const dateString = `${year}-${month}-${day}T${String(time.hour).padStart(2, "0")}:${String(time.minute).padStart(2, "0")}:00+05:30`;
+
+  return new Date(dateString);
 };
 
 const createSingleReminderTask = (message) => {
