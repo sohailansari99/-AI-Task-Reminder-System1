@@ -29,7 +29,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         window.location.href = "login.html";
     });
     const formatDate = (dateString) => {
-        return new Date(dateString).toLocaleString();
+        return new Date(dateString).toLocaleString("en-IN", {
+            timeZone: "Asia/Kolkata",
+            dateStyle: "short",
+            timeStyle: "short"
+        });
     };
     const renderRecentTasks = (tasks) => {
         const recentTasks = document.getElementById("recentTasks");
@@ -91,4 +95,4 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
     fetchTasks();
 })();
-export {};
+export { };

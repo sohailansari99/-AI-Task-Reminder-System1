@@ -25,7 +25,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     let allTasks = [];
     let currentFilter = "all";
     const formatDate = (dateString) => {
-        return new Date(dateString).toLocaleString();
+        return new Date(dateString).toLocaleString("en-IN", {
+            timeZone: "Asia/Kolkata",
+            dateStyle: "short",
+            timeStyle: "short"
+        });
     };
     const markTaskCompleted = (taskId) => __awaiter(void 0, void 0, void 0, function* () {
         try {
@@ -105,8 +109,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
           ${task.aiGenerated ? `<span class="badge ai">AI Generated</span>` : ""}
           <div class="action-buttons">
             ${task.status === "pending"
-                ? `<button class="action-btn complete-btn" data-id="${task._id}">Mark Completed</button>`
-                : ""}
+                    ? `<button class="action-btn complete-btn" data-id="${task._id}">Mark Completed</button>`
+                    : ""}
             <button class="action-btn edit-btn" data-id="${task._id}">Edit</button>
             <button class="action-btn delete-btn" data-id="${task._id}">Delete</button>
           </div>
@@ -190,4 +194,4 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
     init();
 })();
-export {};
+export { };

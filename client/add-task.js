@@ -35,13 +35,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         messageBox.className = `message-box ${type}`;
     };
     const convertToISOString = (localDateTime) => {
-        return new Date(localDateTime).toISOString();
+        return localDateTime;
     };
-    const convertToLocalDateTime = (isoDate) => {
-        const date = new Date(isoDate);
-        const offset = date.getTimezoneOffset();
-        const localDate = new Date(date.getTime() - offset * 60000);
-        return localDate.toISOString().slice(0, 16);
+
+    const convertToLocalDateTime = (date) => {
+        return date.slice(0, 16);
     };
     const populateForm = (task) => {
         document.getElementById("title").value = task.title || "";
@@ -149,4 +147,4 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         loadTaskForEdit();
     }
 })();
-export {};
+export { };
